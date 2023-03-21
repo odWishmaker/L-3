@@ -26,13 +26,14 @@ alert( 'Мы не готовы принять вашу заявку' );
 }
 
 
-var name = prompt("Введите ваше имя");
+var name = prompt("Введите ваше имя").toLowerCase().trim();
 
-if (name == 'Денис') {
+console.log(name);
+if (name == 'денис') {
     alert('Добрый день, учитель');
-} else if (name == 'Алиса' || name == 'Иван' || name == 'Анастасия' || name == 'Андрей') {
+} else if (name == 'алиса' || name == 'иван' || name == 'анастасия' || name == 'андрей') {
     alert( 'Привет, одногрупник' );
-} else if (name != 'Денис' || name == 'Алиса' || name != 'Иван' || name != 'Анастасия' || name != 'Андрей') {
+} else {
     alert( 'Ты не из нашей песочницы!' );
 }
 
