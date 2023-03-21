@@ -4,32 +4,35 @@ var c = null;
 var d = 2;
 var e;
 alert( a || c && b || d ); // 2
-alert( e || c && b != d ); // null
+alert( e || c && b && d ); // null
 alert( e || c || b || e || d); // 7
 
 
-var name = prompt("Введите ваше имя");
-switch (name) {
-case 'Денис':
-alert( 'Добрый день, учитель' );
+var age = prompt("Введите ваш возраст");
+
+switch (age) {
+case '15':
+alert( 'Вы еще слишком юны' );
 break;
-case 'Алиса':
-case 'Иван':
-case 'Анастасия':
-case 'Андрей':
-alert( 'Привет, одногрупник' );
+case '25':
+alert( 'Вы в расцвете сил' );
+break;
+case '80':
+case '90':
+alert( 'Вы уже слишком стар для этого' );
 break;
 default:
-alert( 'Ты не из нашей песочницы!' );
+alert( 'Мы не готовы принять вашу заявку' );
 }
 
 
 var name = prompt("Введите ваше имя");
-if  (name == 'Денис') {
+
+if (name == 'Денис') {
     alert('Добрый день, учитель');
 } else if (name == 'Алиса' || name == 'Иван' || name == 'Анастасия' || name == 'Андрей') {
     alert( 'Привет, одногрупник' );
-} else if(name != 'Денис' || name != 'Иван' || name != 'Анастасия' || name != 'Андрей') {
+} else if (name != 'Денис' || name == 'Алиса' || name != 'Иван' || name != 'Анастасия' || name != 'Андрей') {
     alert( 'Ты не из нашей песочницы!' );
 }
 
